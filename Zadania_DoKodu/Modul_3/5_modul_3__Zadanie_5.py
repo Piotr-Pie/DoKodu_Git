@@ -40,5 +40,8 @@ name_legs = [len(name) for name in names]
 max_leg = max(name_legs)
 
 longest_names = [name for name in names if len(name) == max_leg]
-
 print(longest_names)
+
+for x in animals:
+    if x['Name'] == longest_names[0]:
+        print(x['Name'], x['Rasa'])

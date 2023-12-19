@@ -29,7 +29,7 @@ ilosc = 1
 
 for x in range(3):
     mail = input(f"Podaj {ilosc} adres mailowy: ")
-    if "@" in mail and (".pl" in mail or ".com" in mail):
+    if "@" in mail and (mail.endswith('.pl') or mail.endswith('.com')):
         mail_box.append(mail)
     ilosc += 1
 

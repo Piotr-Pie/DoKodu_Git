@@ -4,14 +4,19 @@
 # dodasz ten sam produkt?
 
 
-items_list = {'Tarcza', 'Miecz', 'Zbroja'}
-print(items_list)
+from random import choice
 
-items_list.add('Tarcza')
-print(items_list)
+items = ['latarka', 'konewka', 'miecz', 'helm', 'rekawice', 'buty']
+player_items = set()
 
-items_list.add('Helm')
-print(items_list)
+for _ in range(20):
+    item = choice(items)
+    print(f'Znalazłem item {item}')
+    if item in player_items:
+        print(f'Ten przedmiot już znalazłem !!!')
+    player_items.add(item)
+
+print(player_items)
 
 
 # Odbierz od użytkownika 10 adresów email. Sprawdź, czy adres
